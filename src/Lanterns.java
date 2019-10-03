@@ -1,6 +1,6 @@
 /* Ashton Rischer
 9/22/19
-This will be a program that prints out a Lantern shape
+This will be a program that prints out a Lantern shape using methods
  */
 public class Lanterns {
 
