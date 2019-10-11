@@ -14,6 +14,10 @@ public class ComplexFigures {
         top();
         bot();
         line();
+        line();
+        top();
+        bot();
+        line();
     }
 
     public static void line() {
