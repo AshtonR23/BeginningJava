@@ -10,39 +10,61 @@ public class SeattleTower {
 
     public static void main(String[] args) {
 
-       // polesegment();
+        polesegment();
         top();
         //spikebase();
        // midsection();
-       // top();
+        top();
     }
 
-  /*  public static void polesegment()
+    public static void polesegment()
     {
-        int pole;
-        pole = 4;
-        for (int line = 1; line <= pole; line++)
+        int pole = 4;
+        for (int line = 0; line < pole; line++)
         {
-            space(line);
-            space(line);
-            System.out.println("||");
+            System.out.println("            ||");
         }
+
+
     }
-      /*  public static void top(){
-        String space;
-         space = (" ");
+        public static void top(){
+        String space = ("         ");
+         System.out.print(space);
             for (int line =SIZE -5; line <= SIZE; line++)
             {
                 System.out.println(space);
-                System.out.print("/||\\");
+                System.out.print("_/");
+            for ( int dot = 1; dot < 3; dot++);
+                {
+                    System.out.print(":::");
+                    System.out.print("||");
+                    System.out.print(":::");
+                }
+                System.out.println("\\_");
 
-            }
-                int semicolon = 3;
+            }}}
+          /*      int semicolon = 3;
             for ( int dot = 1; dot < semicolon;dot++)
             {
                 System.out.print(":::");
             }
-      } */
+            for (int line = 1; line <= SIZE; line++)
+            {
+
+                for (int dot = 1; dot < 2* line - SIZE; dot++)
+                {
+                    space(line);
+                    space(line);
+                    System.out.print("__/");
+                    System.out.print(":");
+                    System.out.print("||");
+                    System.out.print(":");
+                    System.out.println("\\__");
+                }
+
+            }
+        }
+
 
 
 
@@ -53,26 +75,12 @@ public class SeattleTower {
             System.out.print(" ");
         }
     }
-    public static void top() {
-        for (int line = 1; line <= SIZE; line++)
-        {
 
-            for (int dot = 1; dot < 2* line - SIZE; dot++)
-            {
-                space(line);
-                space(line);
-                System.out.print("__/");
-                System.out.print(":");
-                System.out.print("||");
-                System.out.print(":");
-                System.out.println("\\__");
-            }
-
-        }
-}
 
 }
 
+
+           */
 
 
 
