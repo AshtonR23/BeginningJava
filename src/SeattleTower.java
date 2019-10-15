@@ -12,89 +12,106 @@ public class SeattleTower {
 
         polesegment();
         top();
-        //spikebase();
-       // midsection();
+        base();
+       polesegment();
+        midsection();
         top();
     }
 
-    public static void polesegment()
+
+  //This method will print the "poles" at the top based on the size
+  public static void polesegment()
     {
-        int pole = 4;
-        for (int line = 0; line < pole; line++)
+        for (int line = SIZE; line > 0; line--)
         {
-            System.out.println("            ||");
+            for (int space = 0; space<SIZE*3; space++)
+            {
+                System.out.print(" ");
+            }
+            System.out.print("||");
+            System.out.print('\n');
         }
-
-
     }
-        public static void top(){
-        String space = ("         ");
-         System.out.print(space);
-            for (int line =SIZE -5; line <= SIZE; line++)
-            {
-                System.out.println(space);
-                System.out.print("_/");
-            for ( int dot = 1; dot < 3; dot++);
-                {
-                    System.out.print(":::");
-                    System.out.print("||");
-                    System.out.print(":::");
-                }
-                System.out.println("\\_");
-
-            }}}
-          /*      int semicolon = 3;
-            for ( int dot = 1; dot < semicolon;dot++)
-            {
-                System.out.print(":::");
+    //This method will print the pyramid structure at the top based on the size
+        public static void top()
+        {
+            for (int line = SIZE * 2; line > -SIZE; line -= 3) {
+                Spaces(line);
+                ColonPyramid(line);
+                System.out.print('\n');
             }
-            for (int line = 1; line <= SIZE; line++)
+            Line();
+        }
+        //This method will print the base part underneath the pyramid structure based on the size
+
+        public static void base()
+        {
+            for(int line = SIZE+1; line>-2; line-=2)
             {
-
-                for (int dot = 1; dot < 2* line - SIZE; dot++)
+                for (int space = -1; space<SIZE-line;space++)
                 {
-                    space(line);
-                    space(line);
-                    System.out.print("__/");
-                    System.out.print(":");
-                    System.out.print("||");
-                    System.out.print(":");
-                    System.out.println("\\__");
+                    System.out.print(" ");
                 }
+                System.out.print("\\_");
+                for(int b = 0; b<SIZE*2+line-2;b++)
+                {
+                    System.out.print("/\\");
+                }
+                System.out.print("_/");
 
+                System.out.print('\n');
             }
         }
+        //This section will print the long midsection of the tower based on the size
+  public static void midsection(){
+        for ( int line = 0;line<SIZE*4;line++)
+        {
+            for(int space = SIZE*3-3 ;space<(SIZE*4)+2*(SIZE/4);space++)
+            {
+                System.out.print(" ");
+            }
+            System.out.println("|%%||%%|");
+        }
+    }
 
+//This is a separate method that will be called within a larger method
 
-
-
-    public static void space(int line)
+    public static void ColonPyramid(int line)
     {
-        for (int space = 1; space <= -2 * line + 2 * SIZE; space++)
+        for (int colon = 0; colon <(SIZE*2-line); colon++)
+        {
+            System.out.print(":");
+        }
+        System.out.print("||");
+        for (int colon = 0; colon <(SIZE*2-line); colon++)
+        {
+            System.out.print(":");
+        }
+        System.out.print("\\__");
+    }
+//This is a method that controls the number of spaces printed before the top of the pyramid begins printing on each line
+    public static void Spaces(int line)
+    {
+        for (int space = 3; space<line+SIZE; space++)
         {
             System.out.print(" ");
         }
+        System.out.print("__/");
+    }
+//This is a method that prints the lines in the middle of the pyramid
+    public static void Line()
+    {
+        System.out.print("|");
+        for (int x = 0; x<SIZE*6;x++)
+        {
+            System.out.print("\"");
+        }
+        System.out.print("|");
+        System.out.print('\n');
     }
 
 
 }
-
-
-           */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
