@@ -29,15 +29,15 @@ public class EnglishCalculator {
             {
                 case '+':
                      result = num1+num2;
-                    System.out.print(one + " plus " + two + " is "+ result);
+                    System.out.print(one + " plus" + two + " is "+ result);
                     break;
                 case '-':
                      result = num1-num2;
-                    System.out.print(one + " minus " + two + " is "+ result);
+                    System.out.print(one + " minus" + two + " is "+ result);
                     break;
                 case '*':
                      result = num1*num2;
-                    System.out.print(one + " multiplied by " + two + " is "+ result);
+                    System.out.print(one + " multiplied by" + two + " is "+ result);
                     break;
                 case '/':
                     if (num2 == 0){
@@ -45,12 +45,12 @@ public class EnglishCalculator {
                     }
                     else {
                          result = num1/num2;
-                        System.out.print(one + " divided by " + two + " is "+ result);
+                        System.out.print(one + " divided by" + two + " is "+ result);
                     }
                         break;
                 case '^':
                      result = (int) Math.pow(num1,num2);
-                    System.out.print(one + " to the power of " + two + " is "+ result);
+                    System.out.print(one + " to the power of" + two + " is "+ result);
                     break;
                 default: System.out.print("Sorry you did not give a valid operator");
             }
